@@ -68,7 +68,7 @@ volume=((baseLength+topLength)*height*width)/2;
 const qty=volume*density;
 
 document.getElementById("volume").innerHTML=volume.toFixed(2)+" m³";
-document.getElementById("qty").innerHTML=qty.toFixed(2)+" Kg";
+document.getElementById("qty").innerHTML=qty.toFixed(2)+" Tons";
 document.getElementById("extraNote").innerHTML=note;
 
 }
