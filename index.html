@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stacking Yard Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+<div class="top-section">
+<img src="assets/logo.png" class="logo">
+<div>
+<h1>STACKING YARD CALCULATOR</h1>
+<p>Volume & Cargo Quantity Estimation System</p>
+</div>
+</div>
+
+<div class="grid">
+
+<div class="field">
+<label>1. Yard</label>
+<select id="yard">
+<option value="yard1">Yard 1</option>
+<option value="yard2">Yard 2</option>
+<option value="yard3">Yard 3</option>
+<option value="yard4">Yard 4</option>
+<option value="yard2$3">Yard 2&3</option>
+</select>
+</div>
+
+<div class="field">
+<label>2. Width of Stacking Yard (m)</label>
+<input type="number" id="width" readonly>
+</div>
+
+<div class="field">
+<label>3. Cargo Type</label>
+<select id="cargo">
+<option value="Steam Coal">Steam Coal</option>
+<option value="Coking Coal">Coking Coal</option>
+<option value="Pet Coke">Pet Coke</option>
+<option value="Met Coke">Met Coke</option>
+<option value="Bauxite">Bauxite</option>
+</select>
+</div>
+
+<div class="field">
+<label>4. Density (Kg/m³)</label>
+<input type="number" id="density" placeholder="Enter Density">
+</div>
+
+<div class="field">
+<label>5. Angle of Repose (Deg)</label>
+<input type="number" id="angle" readonly>
+</div>
+
+<div class="field">
+<label>6. Length of Yard Available (m)</label>
+<input type="number" id="length" placeholder="Enter Length">
+</div>
+
+<div class="field full">
+<label>7. Height of Pile (m)</label>
+<input type="number" id="height" readonly>
+</div>
+
+</div>
+
+<button onclick="calculate()">CALCULATE</button>
+
+<div class="results">
+
+<div class="card">
+<h2>Volume of Pile</h2>
+<p id="volume">0 m³</p>
+</div>
+
+<div class="card">
+<h2>Qty of Cargo</h2>
+<p id="qty">0 Kg</p>
+</div>
+
+</div>
+
+<div class="note" id="extraNote"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
