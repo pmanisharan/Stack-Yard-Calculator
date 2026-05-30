@@ -15,7 +15,7 @@ const cargoAngles={
 "Bauxite":37.5
 };
 
-const cargoDenaity={
+const cargoDensity={
 "Steam Coal":1,
 "Coking Coal":0.8,
 "Pet Coke":0.75,
