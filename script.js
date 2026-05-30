@@ -15,6 +15,14 @@ const cargoAngles={
 "Bauxite":37.5
 };
 
+const cargoDenaity={
+"Steam Coal":1,
+"Coking Coal":0.8,
+"Pet Coke":0.75,
+"Met Coke":0.5,
+"Bauxite":1.65
+};
+
 const yardSelect=document.getElementById("yard");
 const cargoSelect=document.getElementById("cargo");
 
@@ -26,11 +34,17 @@ function updateAngle(){
 document.getElementById("angle").value=cargoAngles[cargoSelect.value];
 }
 
+function updateDensity(){
+document.getElementById("density").value=cargoDensity[cargoSelect.value];
+}
+
 yardSelect.addEventListener("change",updateWidth);
 cargoSelect.addEventListener("change",updateAngle);
+cargoSelect.addEventListener("change",updateDensity);
 
 updateWidth();
 updateAngle();
+updateDensity();
 
 function calculate(){
 
